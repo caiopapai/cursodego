@@ -24,10 +24,12 @@ func main() {
 	SomEmitidoPorGalinha(aveRara)
 }
 
+// SomEmitidoPorGalinha é um som
 func SomEmitidoPorGalinha(g model.Ave) {
 	fmt.Println(g.Cacareja())
 }
 
+// SomEmitidoPorPato é um som
 func SomEmitidoPorPato(p model.Ave) {
 	fmt.Println(p.Quack())
 }
