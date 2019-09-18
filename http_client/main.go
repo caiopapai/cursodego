@@ -20,6 +20,9 @@ func main() {
 	usuario.ID = 1
 	usuario.Nome = "Caio Augusto Papai"
 
+	usuarioResponse := model.Usuario
+	err := json.Unmarshal()
+
 	payload, err := json.Marshal(usuario)
 	if err != nil {
 		fmt.Println("Erro ao converter struct para JSON", err.Error())
@@ -35,7 +38,7 @@ func main() {
 
 	request.Header.Set("content-type", "application/json")
 	request.Header.Set("accept-language", "pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3")
-	request.SetBasicAuth("token", "token")
+	request.SetBasicAuth("clientID", "secret")
 	response, err := client.Do(request)
 	if err != nil {
 		fmt.Println("Erro ao ler conteudo", err.Error())
